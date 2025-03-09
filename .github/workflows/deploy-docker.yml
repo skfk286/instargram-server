@@ -43,3 +43,13 @@ jobs:
           push: true
           platforms: linux/arm64
           tags: ${{ env.DOCKER_HUB_REPOSITORY }}:latest
+
+  Docker-Pull-And-Run:
+    runs-on: [self-hosted]
+    needs: [Docker-Build-And-Push]
+    if: ${{ needs.Docker-Build-And-Push == 'success' }}
+    steps:
+      - name: ✨ 배포 스크립트 실행
+        run: |
+          sh /home/ubuntu/instargram-server/script/depoly-instargram.sh 
+        
