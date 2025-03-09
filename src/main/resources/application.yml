@@ -1,0 +1,7 @@
+aws:
+  access-key: ABCDEFG
+  secret-key: HIJKLMN
+
+db:
+  name: ${DB_NAME}
+  password: ${DB_PASSWORD}
