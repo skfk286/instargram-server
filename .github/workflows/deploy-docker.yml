@@ -51,5 +51,5 @@ jobs:
     steps:
       - name: ✨ 배포 스크립트 실행
         run: |
-          sh /home/ubuntu/instargram-server/script/depoly-instargram.sh 
+          sh /home/ubuntu/instargram-server/script/deploy-instargram.sh 
         
