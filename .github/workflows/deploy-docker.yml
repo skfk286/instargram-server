@@ -47,7 +47,7 @@ jobs:
   Docker-Pull-And-Run:
     runs-on: [self-hosted]
     needs: [Docker-Build-And-Push]
-    if: ${{ needs.Docker-Build-And-Push == 'success' }}
+    if: ${{ needs.Docker-Build-And-Push.result == 'success' }}
     steps:
       - name: ✨ 배포 스크립트 실행
         run: |
