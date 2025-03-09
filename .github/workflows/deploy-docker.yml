@@ -41,7 +41,8 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          # platforms: linux/arm64
+          platforms: linux/amd64
           tags: ${{ env.DOCKER_HUB_REPOSITORY }}:latest
 
   Docker-Pull-And-Run:
