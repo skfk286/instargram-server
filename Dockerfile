@@ -1,4 +1,4 @@
-FROM amd64/amazoncorretto:17
+FROM amazoncorretto:17
 
 ARG JAR_FILE=./build/libs/instargram-server-0.0.1-SNAPSHOT.jar
 
